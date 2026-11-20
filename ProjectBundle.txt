@@ -225,8 +225,8 @@ recipients.txt group) then deletes files (BUG: deletes even when sends failed â€
 ================================================================================
 [Oct-18 bot mute window, ~/code/telebot/bot.log]
   poll error (fail 2, retry in 20s): <urlopen error [Errno 7] No address associated with hostname>
-  alert fail 2137108927: <urlopen error [Errno 7] No address associated with hostname>
-  alert fail -1004411353963: <urlopen error [Errno 7] No address associated with hostname>
+  alert fail <OWNER_CHAT_ID>: <urlopen error [Errno 7] No address associated with hostname>
+  alert fail <GROUP_CHAT_ID>: <urlopen error [Errno 7] No address associated with hostname>
   poll error (fail 13, retry in 300s): <urlopen error [Errno 7] No address associated with hostname>
   poll error (fail 18, retry in 300s): ...   (stuck mute ~01.5h; recovered on backoff after net returned)
 [Oct-17 daytime LinkedIn wave, crawls table]
@@ -1251,7 +1251,7 @@ SOURCE: boot-start-tbot.txt  (syntax: bash)
 export PATH=/data/data/com.termux/files/usr/bin:$PATH
 cd ~
 export TBOT_TOKEN="***REDACTED-TELEGRAM-TOKEN***"
-export TBOT_OWNER=2137108927
+export TBOT_OWNER=<OWNER_CHAT_ID>
 nohup python ~/code/telebot/bot.py > ~/code/telebot/bot.log 2>&1 &
 
 

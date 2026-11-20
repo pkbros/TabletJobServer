@@ -96,7 +96,7 @@ Commands used:
 - Cooldown 2026-10-14: loop paused 8h (IP throttled by our own testing); self-resumes via sleeper, ~evening.
 - Usage: /jobs show → see pairs; `/jobs add ml intern | Noida, India` → next runs include it; /jobs run-now → immediate scan.
 - Outbound: any app drops text in `~/srv/alerts/` → bot forwards to OWNER every ~100s. Apps need no Telegram code.
-- Lock-down: `TBOT_OWNER=<chat-id>` env rejects strangers (`/id` answers anyone). Extra delivery chats in `~/code/telebot/recipients.txt` (group -1004411353963 added 2026-10-13). OWNER=2137108927 set 2026-10-13.
+- Lock-down: `TBOT_OWNER=<chat-id>` env rejects strangers (`/id` answers anyone). Extra delivery chats in `~/code/telebot/recipients.txt` (a group chat ID added 2026-10-13). OWNER set 2026-10-13.
 - INCIDENT 2026-10-18 ~03:54→05:32 IST: bot went FULLY SILENT (no digests, /commands dead) — tablet-wide DNS flap (Errno 7) hardened; poller backoff stuck at fail 18; alert-forwarding failing same way. NOTHING on the tablet can warn you over a dead net (structural mute). Self-recovered on backoff once DNS returned (~05:32; proven by a dropped test alert delivered+deleted). Diagnosis order: 1) probe tablet DNS, 2) pgrep single bot instance, 3) check spool. DNS-bypass fix (DoH via 1.1.1.1 for bot.py+scraper.py, ~30 lines, no root) = the durable patch; parked owner decision.
 - Incident 2026-10-14 ~03:50: network blip (429 then 502) wedged the poller silently — alive but mute.
   Fix: exponential backoff on poll errors (5s→300s cap) instead of fixed 5s hammer. Job loop was FINE throughout
