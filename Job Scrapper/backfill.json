@@ -1,0 +1,18 @@
+{
+  "cadence_min": 30,
+  "pages_per_search": 3,
+  "request_gap_s": 10,
+  "time_window": "r604800",
+  "seen_ttl_hours": 1,
+  "llm": {"provider": "groq", "model": "qwen/qwen3.8-27b", "key_env": "GROQ_API_KEY"},
+  "searches": [
+    {"keywords": "(\"AI engineer\" OR \"ML engineer\" OR \"AI intern\" OR \"ML intern\") AND (fresher OR intern OR junior) NOT senior NOT lead", "location": "India"},
+    {"keywords": "(\"generative AI\" OR GenAI OR LLM OR chatbot OR RAG) AND (intern OR fresher OR junior) NOT senior NOT lead", "location": "India"},
+    {"keywords": "(\"Python developer\" OR \"backend developer\" OR FastAPI) AND (intern OR fresher OR junior) NOT senior NOT lead", "location": "India"},
+    {"keywords": "(\"SDE intern\" OR \"software engineer intern\" OR \"SDE 1\") AND (fresher OR intern) NOT senior", "location": "India"},
+    {"keywords": "(\"full stack\" OR MERN OR React) AND (intern OR fresher OR junior) NOT senior NOT lead", "location": "India"},
+    {"keywords": "(intern OR fresher) AND (AI OR ML OR Python) NOT senior NOT lead", "location": "Noida, India"},
+    {"keywords": "(intern OR fresher) AND (AI OR ML OR Python) NOT senior NOT lead", "location": "Delhi, India"},
+    {"keywords": "(intern OR fresher) AND (AI OR ML OR Python) NOT senior NOT lead", "location": "Gurugram, India"}
+  ]
+}

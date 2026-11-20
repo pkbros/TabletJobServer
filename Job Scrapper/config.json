@@ -1,0 +1,36 @@
+{
+  "cadence_min": 30,
+  "pages_per_search": 1,
+  "request_gap_s": 8,
+  "time_window": "r7200",
+  "seen_ttl_hours": 4,
+  "detail_cap": 10,
+  "llm": {
+    "provider": "groq",
+    "model": "qwen/qwen3.8-27b",
+    "key_env": "GROQ_API_KEY"
+  },
+  "terms": [
+    "AI engineer",
+    "ML engineer",
+    "AI intern",
+    "ML intern",
+    "generative AI",
+    "GenAI",
+    "LLM engineer",
+    "chatbot developer",
+    "Python developer",
+    "backend developer",
+    "SDE intern",
+    "software engineer intern",
+    "full stack developer",
+    "MERN developer"
+  ],
+  "locations": [
+    "India",
+    "Noida, Uttar Pradesh, India",
+    "Delhi, Delhi, India",
+    "Gurugram, Haryana, India",
+    "Bengaluru, Karnataka, India"
+  ]
+}

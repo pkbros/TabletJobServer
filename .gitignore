@@ -1,0 +1,35 @@
+# Runtime state (never commit — contains tokens, cookies, live data)
+seen.db
+*.db
+*.bak.*
+cookies.txt
+latest.txt
+loop.pid
+last_digest
+zero_streak
+last_alarm_ts
+run_count
+*.log
+scraper.log
+bot.log
+loop.log
+cloudflared.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Firmware/images/partitions — 1.5 GB of device recovery binaries, not part of the app
+images/
+partitions/
+backup-stock/
+firmware-blobs/
+
+# Temp / OS
+*.tmp
+*.swp
+Thumbs.db
+.DS_Store
